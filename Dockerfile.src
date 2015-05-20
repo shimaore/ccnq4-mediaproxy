@@ -43,5 +43,6 @@ RUN ./build_inplace
 WORKDIR ../..
 RUN npm install
 
+USER root
 # Configure supervisord, etc.
 CMD ["supervisord","-n"]
