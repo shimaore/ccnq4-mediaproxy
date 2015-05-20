@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shimaore/ccnq4-mediaproxy",
   "scripts": {
+    "pretest": "npm install",
     "test": "mocha"
   },
   "dependencies": {
