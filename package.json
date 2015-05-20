@@ -1,0 +1,31 @@
+{
+  "name": "ccnq4-mediaproxy",
+  "version": "1.0.0",
+  "mediaproxy": {
+    "version": "2.6.1"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shimaore/ccnq4-mediaproxy.git"
+  },
+  "description": "MediaProxy Relay for CCNQ4",
+  "author": "Stéphane Alnet <stephane@shimaore.net> (http://stephane.shimaore.net/)",
+  "license": "Unlicense (http://unlicense.org/)",
+  "bugs": {
+    "url": "https://github.com/shimaore/ccnq4-mediaproxy/issues"
+  },
+  "homepage": "https://github.com/shimaore/ccnq4-mediaproxy",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.25",
+    "coffee-script": "^1.9.2",
+    "supervisord": "0.0.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.2",
+    "mocha": "^2.2.5"
+  }
+}

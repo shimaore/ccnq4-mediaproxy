@@ -1,0 +1,4 @@
+Dockerfile
+vendor/
+node_modules/
+local/
