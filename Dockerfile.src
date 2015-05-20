@@ -32,10 +32,10 @@ ENV NODE_ENV production
 RUN useradd -m opensips
 
 # Build mediaproxy-relay
-COPY . /opt/mediaproxy
-RUN chown -R opensips.opensips /opt/mediaproxy
+COPY . /home/opensips
+RUN chown -R opensips.opensips /home/opensips
 USER opensips
-WORKDIR /opt/mediaproxy
+WORKDIR /home/opensips
 RUN mkdir -p log run/mediaproxy
 WORKDIR vendor
 RUN tar xzvf mediaproxy-MEDIAPROXY_VERSION.tar.gz

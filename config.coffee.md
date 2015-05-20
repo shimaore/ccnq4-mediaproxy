@@ -17,7 +17,7 @@ passport: e.g. O:Kwaoo
         port_range = 49152:65534
         log_level = DEBUG
         [TLS]
-        cert_paths = #{process.env.CERT_PATHS ? '/opt/mediaproxy/local'}
+        cert_paths = #{process.env.CERT_PATHS ? '/home/opensips/local'}
 
       """
 
@@ -27,7 +27,7 @@ passport: e.g. O:Kwaoo
 Configure MediaProxy-relay
 
       mp_config = config()
-      fs.writeFileSync "/opt/mediaproxy/vendor/mediaproxy-#{pkg.mediaproxy.version}/config.ini", mp_config
+      fs.writeFileSync "/home/opensips/vendor/mediaproxy-#{pkg.mediaproxy.version}/config.ini", mp_config
       supervisor.startProcessAsync 'relay'
 
     module.exports = {run,config}

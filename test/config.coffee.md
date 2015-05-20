@@ -12,6 +12,6 @@
           port_range = 49152:65534
           log_level = DEBUG
           [TLS]
-          cert_paths = local
+          cert_paths = /home/opensips/local
 
         '''
