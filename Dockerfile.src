@@ -40,6 +40,7 @@ RUN tar xzvf mediaproxy-MEDIAPROXY_VERSION.tar.gz
 WORKDIR mediaproxy-MEDIAPROXY_VERSION
 RUN ./build_inplace
 WORKDIR ../..
+RUN npm install
 
 # Configure supervisord, etc.
 CMD ["supervisord","-n"]
