@@ -27,7 +27,7 @@ passport: e.g. O:Kwaoo
 Configure MediaProxy-relay
 
       mp_config = config()
-      fs.writeFileSync "/opt/mediaproxy/local/mediaproxy-#{pkg.mediaproxy.version}/config.ini", mp_config
+      fs.writeFileSync "/opt/mediaproxy/vendor/mediaproxy-#{pkg.mediaproxy.version}/config.ini", mp_config
       supervisor.startProcessAsync 'relay'
 
     module.exports = {run,config}
