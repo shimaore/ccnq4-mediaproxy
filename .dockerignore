@@ -3,3 +3,4 @@ Makefile
 node_modules
 README.md
 Dockerfile.src
+supervisord.conf.src
