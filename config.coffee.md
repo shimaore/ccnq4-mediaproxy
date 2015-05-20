@@ -22,7 +22,7 @@ passport: e.g. O:Kwaoo
       """
 
     run = ->
-      supervisor = Promise.promisifyAll supervisord.connect 'http://127.0.0.1:5708'
+      supervisor = Promise.promisifyAll supervisord.connect 'http://127.0.0.1:5710'
 
 Configure MediaProxy-relay
 
