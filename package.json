@@ -1,6 +1,6 @@
 {
   "name": "ccnq4-mediaproxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "mediaproxy": {
     "version": "2.6.1"
   },
