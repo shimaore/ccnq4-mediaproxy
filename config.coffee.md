@@ -3,16 +3,14 @@
     supervisord = require 'supervisord'
     fs = require 'fs'
 
-    run = ->
-      supervisor = Promise.promisifyAll supervisord.connect 'http://127.0.0.1:5708'
+    config = ->
 
-Configure MediaProxy-relay
+dispatchers: space-separated list of dispatchers
+passport: e.g. O:Kwaoo
 
-      mp_config = """
+      """
         [Relay]
-        # space-separated list of dispatchers
-        dispatchers = #{proces.env.DISPATCHERS}
-        # e.g. O:Kwaoo
+        dispatchers = #{process.env.DISPATCHERS}
         passport = #{process.env.PASSPORT ? 'None'}
         ;relay_ip =
         ;advertised_ip =
@@ -22,9 +20,16 @@ Configure MediaProxy-relay
         cert_paths = local
 
       """
+
+    run = ->
+      supervisor = Promise.promisifyAll supervisord.connect 'http://127.0.0.1:5708'
+
+Configure MediaProxy-relay
+
+      mp_config = config()
       fs.writeFileSync "/opt/mediaproxy/local/mediaproxy-#{pkg.mediaproxy.version}/config.ini", mp_config
       supervisor.startProcessAsync 'relay'
 
-    module.exports = run
+    module.exports = {run,config}
     if require.main is module
       run()
