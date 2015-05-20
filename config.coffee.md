@@ -17,7 +17,7 @@ passport: e.g. O:Kwaoo
         port_range = 49152:65534
         log_level = DEBUG
         [TLS]
-        cert_paths = local
+        cert_paths = #{process.env.CERT_PATHS ? '/opt/mediaproxy/local'}
 
       """
 
