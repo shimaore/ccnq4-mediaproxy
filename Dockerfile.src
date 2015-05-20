@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   curl \
   git \
   iptables-dev \
+  kmod \
   libjson0 \
   libnetfilter-conntrack-dev \
   make \
