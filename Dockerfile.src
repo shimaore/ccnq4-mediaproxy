@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   python-dev \
   python-gnutls \
   python-twisted-core \
+  python-twisted-names \
   supervisor
 
 # Install Node.js using `n`.
